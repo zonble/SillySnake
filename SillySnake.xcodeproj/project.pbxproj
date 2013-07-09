@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4416E81178C58510003DE46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4416E80178C58510003DE46 /* Foundation.framework */; };
+		D4416E83178C58510003DE46 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4416E82178C58510003DE46 /* CoreGraphics.framework */; };
+		D4416E85178C58510003DE46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4416E84178C58510003DE46 /* UIKit.framework */; };
+		D4416E8B178C58510003DE46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4416E89178C58510003DE46 /* InfoPlist.strings */; };
+		D4416E8D178C58510003DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4416E8C178C58510003DE46 /* main.m */; };
+		D4416E91178C58510003DE46 /* ZBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4416E90178C58510003DE46 /* ZBAppDelegate.m */; };
+		D4416E94178C58510003DE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4416E92178C58510003DE46 /* Main.storyboard */; };
+		D4416E97178C58510003DE46 /* ZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4416E96178C58510003DE46 /* ZBViewController.m */; };
+		D4416E99178C58510003DE46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4416E98178C58510003DE46 /* Images.xcassets */; };
+		D4416EA0178C58520003DE46 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4416E9F178C58520003DE46 /* XCTest.framework */; };
+		D4416EA1178C58520003DE46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4416E80178C58510003DE46 /* Foundation.framework */; };
+		D4416EA2178C58520003DE46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4416E84178C58510003DE46 /* UIKit.framework */; };
+		D4416EAA178C58520003DE46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4416EA8178C58520003DE46 /* InfoPlist.strings */; };
+		D4416EAC178C58520003DE46 /* SillySnakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4416EAB178C58520003DE46 /* SillySnakeTests.m */; };
+		D4416EB7178C59090003DE46 /* ZBSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = D4416EB6178C58C10003DE46 /* ZBSnake.m */; };
+		D4416EB8178C5B3D0003DE46 /* ZBSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = D4416EB6178C58C10003DE46 /* ZBSnake.m */; };
+		D4416EBB178C619E0003DE46 /* ZBSnakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4416EBA178C618A0003DE46 /* ZBSnakeView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4416EA3178C58520003DE46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4416E75178C58510003DE46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4416E7C178C58510003DE46;
+			remoteInfo = SillySnake;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4416E7D178C58510003DE46 /* SillySnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SillySnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4416E80178C58510003DE46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4416E82178C58510003DE46 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D4416E84178C58510003DE46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4416E88178C58510003DE46 /* SillySnake-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SillySnake-Info.plist"; sourceTree = "<group>"; };
+		D4416E8A178C58510003DE46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4416E8C178C58510003DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4416E8E178C58510003DE46 /* SillySnake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SillySnake-Prefix.pch"; sourceTree = "<group>"; };
+		D4416E8F178C58510003DE46 /* ZBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBAppDelegate.h; sourceTree = "<group>"; };
+		D4416E90178C58510003DE46 /* ZBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBAppDelegate.m; sourceTree = "<group>"; };
+		D4416E93178C58510003DE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4416E95178C58510003DE46 /* ZBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBViewController.h; sourceTree = "<group>"; };
+		D4416E96178C58510003DE46 /* ZBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBViewController.m; sourceTree = "<group>"; };
+		D4416E98178C58510003DE46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D4416E9E178C58520003DE46 /* SillySnakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SillySnakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4416E9F178C58520003DE46 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D4416EA7178C58520003DE46 /* SillySnakeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SillySnakeTests-Info.plist"; sourceTree = "<group>"; };
+		D4416EA9178C58520003DE46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4416EAB178C58520003DE46 /* SillySnakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SillySnakeTests.m; sourceTree = "<group>"; };
+		D4416EB5178C58C10003DE46 /* ZBSnake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBSnake.h; sourceTree = "<group>"; };
+		D4416EB6178C58C10003DE46 /* ZBSnake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBSnake.m; sourceTree = "<group>"; };
+		D4416EB9178C618A0003DE46 /* ZBSnakeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBSnakeView.h; sourceTree = "<group>"; };
+		D4416EBA178C618A0003DE46 /* ZBSnakeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBSnakeView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4416E7A178C58510003DE46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4416E83178C58510003DE46 /* CoreGraphics.framework in Frameworks */,
+				D4416E85178C58510003DE46 /* UIKit.framework in Frameworks */,
+				D4416E81178C58510003DE46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4416E9B178C58520003DE46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4416EA0178C58520003DE46 /* XCTest.framework in Frameworks */,
+				D4416EA2178C58520003DE46 /* UIKit.framework in Frameworks */,
+				D4416EA1178C58520003DE46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4416E74178C58510003DE46 = {
+			isa = PBXGroup;
+			children = (
+				D4416E86178C58510003DE46 /* SillySnake */,
+				D4416EA5178C58520003DE46 /* SillySnakeTests */,
+				D4416E7F178C58510003DE46 /* Frameworks */,
+				D4416E7E178C58510003DE46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4416E7E178C58510003DE46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4416E7D178C58510003DE46 /* SillySnake.app */,
+				D4416E9E178C58520003DE46 /* SillySnakeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4416E7F178C58510003DE46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4416E80178C58510003DE46 /* Foundation.framework */,
+				D4416E82178C58510003DE46 /* CoreGraphics.framework */,
+				D4416E84178C58510003DE46 /* UIKit.framework */,
+				D4416E9F178C58520003DE46 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4416E86178C58510003DE46 /* SillySnake */ = {
+			isa = PBXGroup;
+			children = (
+				D4416E8F178C58510003DE46 /* ZBAppDelegate.h */,
+				D4416E90178C58510003DE46 /* ZBAppDelegate.m */,
+				D4416E92178C58510003DE46 /* Main.storyboard */,
+				D4416E95178C58510003DE46 /* ZBViewController.h */,
+				D4416E96178C58510003DE46 /* ZBViewController.m */,
+				D4416EB5178C58C10003DE46 /* ZBSnake.h */,
+				D4416EB6178C58C10003DE46 /* ZBSnake.m */,
+				D4416EB9178C618A0003DE46 /* ZBSnakeView.h */,
+				D4416EBA178C618A0003DE46 /* ZBSnakeView.m */,
+				D4416E98178C58510003DE46 /* Images.xcassets */,
+				D4416E87178C58510003DE46 /* Supporting Files */,
+			);
+			path = SillySnake;
+			sourceTree = "<group>";
+		};
+		D4416E87178C58510003DE46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4416E88178C58510003DE46 /* SillySnake-Info.plist */,
+				D4416E89178C58510003DE46 /* InfoPlist.strings */,
+				D4416E8C178C58510003DE46 /* main.m */,
+				D4416E8E178C58510003DE46 /* SillySnake-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4416EA5178C58520003DE46 /* SillySnakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4416EAB178C58520003DE46 /* SillySnakeTests.m */,
+				D4416EA6178C58520003DE46 /* Supporting Files */,
+			);
+			path = SillySnakeTests;
+			sourceTree = "<group>";
+		};
+		D4416EA6178C58520003DE46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4416EA7178C58520003DE46 /* SillySnakeTests-Info.plist */,
+				D4416EA8178C58520003DE46 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4416E7C178C58510003DE46 /* SillySnake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4416EAF178C58520003DE46 /* Build configuration list for PBXNativeTarget "SillySnake" */;
+			buildPhases = (
+				D4416E79178C58510003DE46 /* Sources */,
+				D4416E7A178C58510003DE46 /* Frameworks */,
+				D4416E7B178C58510003DE46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SillySnake;
+			productName = SillySnake;
+			productReference = D4416E7D178C58510003DE46 /* SillySnake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4416E9D178C58520003DE46 /* SillySnakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4416EB2178C58520003DE46 /* Build configuration list for PBXNativeTarget "SillySnakeTests" */;
+			buildPhases = (
+				D4416E9A178C58520003DE46 /* Sources */,
+				D4416E9B178C58520003DE46 /* Frameworks */,
+				D4416E9C178C58520003DE46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4416EA4178C58520003DE46 /* PBXTargetDependency */,
+			);
+			name = SillySnakeTests;
+			productName = SillySnakeTests;
+			productReference = D4416E9E178C58520003DE46 /* SillySnakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4416E75178C58510003DE46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = zonble;
+				TargetAttributes = {
+					D4416E9D178C58520003DE46 = {
+						TestTargetID = D4416E7C178C58510003DE46;
+					};
+				};
+			};
+			buildConfigurationList = D4416E78178C58510003DE46 /* Build configuration list for PBXProject "SillySnake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4416E74178C58510003DE46;
+			productRefGroup = D4416E7E178C58510003DE46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4416E7C178C58510003DE46 /* SillySnake */,
+				D4416E9D178C58520003DE46 /* SillySnakeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4416E7B178C58510003DE46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4416E99178C58510003DE46 /* Images.xcassets in Resources */,
+				D4416E8B178C58510003DE46 /* InfoPlist.strings in Resources */,
+				D4416E94178C58510003DE46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4416E9C178C58520003DE46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4416EAA178C58520003DE46 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4416E79178C58510003DE46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4416E97178C58510003DE46 /* ZBViewController.m in Sources */,
+				D4416E91178C58510003DE46 /* ZBAppDelegate.m in Sources */,
+				D4416EB7178C59090003DE46 /* ZBSnake.m in Sources */,
+				D4416E8D178C58510003DE46 /* main.m in Sources */,
+				D4416EBB178C619E0003DE46 /* ZBSnakeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4416E9A178C58520003DE46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4416EB8178C5B3D0003DE46 /* ZBSnake.m in Sources */,
+				D4416EAC178C58520003DE46 /* SillySnakeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4416EA4178C58520003DE46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4416E7C178C58510003DE46 /* SillySnake */;
+			targetProxy = D4416EA3178C58520003DE46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4416E89178C58510003DE46 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4416E8A178C58510003DE46 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D4416E92178C58510003DE46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4416E93178C58510003DE46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4416EA8178C58520003DE46 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4416EA9178C58520003DE46 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4416EAD178C58520003DE46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D4416EAE178C58520003DE46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4416EB0178C58520003DE46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SillySnake/SillySnake-Prefix.pch";
+				INFOPLIST_FILE = "SillySnake/SillySnake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4416EB1178C58520003DE46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SillySnake/SillySnake-Prefix.pch";
+				INFOPLIST_FILE = "SillySnake/SillySnake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D4416EB3178C58520003DE46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SillySnake.app/SillySnake";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SillySnake/SillySnake-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SillySnakeTests/SillySnakeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D4416EB4178C58520003DE46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SillySnake.app/SillySnake";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SillySnake/SillySnake-Prefix.pch";
+				INFOPLIST_FILE = "SillySnakeTests/SillySnakeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4416E78178C58510003DE46 /* Build configuration list for PBXProject "SillySnake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4416EAD178C58520003DE46 /* Debug */,
+				D4416EAE178C58520003DE46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4416EAF178C58520003DE46 /* Build configuration list for PBXNativeTarget "SillySnake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4416EB0178C58520003DE46 /* Debug */,
+				D4416EB1178C58520003DE46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4416EB2178C58520003DE46 /* Build configuration list for PBXNativeTarget "SillySnakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4416EB3178C58520003DE46 /* Debug */,
+				D4416EB4178C58520003DE46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4416E75178C58510003DE46 /* Project object */;
+}
