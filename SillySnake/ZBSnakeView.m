@@ -9,8 +9,8 @@
 		return;
 	}
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
-	CGFloat w = self.bounds.size.width / worldSize.width;
-	CGFloat h = self.bounds.size.height / worldSize.height;
+	CGFloat w = self.bounds.size.width/worldSize.width;
+	CGFloat h = self.bounds.size.height/worldSize.height;
 
 	ZBSnake *snake = [self.delegate snakeForSnakeView:self];
 	if (snake) {

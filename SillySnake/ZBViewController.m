@@ -19,14 +19,14 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	worldSize = ZBMakeSnakeWorldSize(20, 10);
 	self.snakeView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
+	[super didReceiveMemoryWarning];
 }
 
 - (void)timerMethod:(NSTimer *)inTimer

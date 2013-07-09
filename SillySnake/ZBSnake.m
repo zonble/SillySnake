@@ -19,15 +19,15 @@ ZBSnakePoint ZBMakeSnakePoint(NSUInteger x, NSUInteger y)
 @implementation NSValue (ZBSnakePoint)
 + (id)valueWithSnakePoint:(ZBSnakePoint)inPoint
 {
-	return  [NSValue valueWithBytes:&inPoint objCType:@encode(ZBSnakePoint)];
+	return	[NSValue valueWithBytes:&inPoint objCType:@encode(ZBSnakePoint)];
 }
 - (ZBSnakePoint)snakePointValue
 {
 	if (strcmp([self objCType], @encode(ZBSnakePoint)) == 0) {
-        ZBSnakePoint origin;
-        [self getValue:&origin];
+		ZBSnakePoint origin;
+		[self getValue:&origin];
 		return origin;
-    }
+	}
 	return ZBMakeSnakePoint(0, 0);
 }
 @end
@@ -46,17 +46,17 @@ ZBSnakePoint ZBMakeSnakePoint(NSUInteger x, NSUInteger y)
 - (id)initWithWorldSize:(ZBSnakeWorldSize)inWorldSize length:(NSUInteger)inLength
 {
 	self = [super init];
-    if (self) {
+	if (self) {
 		points = [[NSMutableArray alloc] init];
 		worldSize = inWorldSize;
-        direction = ZBSnakeDirectionLeft;
+		direction = ZBSnakeDirectionLeft;
 		NSUInteger x = (NSUInteger)(worldSize.width / 2.0);
 		NSUInteger y = (NSUInteger)(worldSize.height / 2.0);
 		for (NSInteger i = 0; i < inLength; i++) {
 			[points addObject:[NSValue valueWithSnakePoint:ZBMakeSnakePoint(x + i, y)]];
 		}
-    }
-    return self;
+	}
+	return self;
 }
 
 - (void)move
