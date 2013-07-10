@@ -110,12 +110,8 @@ ZBSnakePoint ZBMakeSnakePoint(NSUInteger x, NSUInteger y)
 	NSInteger x = lastPoint.x - theOneBeforeLastPoint.x;
 	NSInteger y = lastPoint.y - theOneBeforeLastPoint.y;
 	for (NSInteger i = 0; i < inLength; i++) {
-		NSInteger theX = lastPoint.x + x *i;
-		NSInteger theY = lastPoint.y + y *i;
-		if (theX >= worldSize.width) theX = 0;
-		if (theX < 0) theX = worldSize.width - 1;
-		if (theY >= worldSize.height) theY = 0;
-		if (theY < 0) theX = worldSize.height - 1;
+		NSInteger theX = (lastPoint.x + x *i) % worldSize.width;
+		NSInteger theY = (lastPoint.y + y *i) % worldSize.height;
 		[points addObject:[NSValue valueWithSnakePoint:ZBMakeSnakePoint(theX, theY)]];
 	}
 }
