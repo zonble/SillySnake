@@ -109,9 +109,14 @@ ZBSnakePoint ZBMakeSnakePoint(NSUInteger x, NSUInteger y)
 	ZBSnakePoint theOneBeforeLastPoint = [[points objectAtIndex:[points count]-2] snakePointValue];
 	NSInteger x = lastPoint.x - theOneBeforeLastPoint.x;
 	NSInteger y = lastPoint.y - theOneBeforeLastPoint.y;
+	if (lastPoint.x == 0 && theOneBeforeLastPoint.x == worldSize.width - 1) x = 1;
+	if (lastPoint.x == worldSize.width - 1 && theOneBeforeLastPoint.x == 0) x = -1;
+	if (lastPoint.y == 0 && theOneBeforeLastPoint.y == worldSize.height - 1) y = 1;
+	if (lastPoint.y == worldSize.height - 1 && theOneBeforeLastPoint.y == 0) x = -1;
+
 	for (NSInteger i = 0; i < inLength; i++) {
-		NSInteger theX = (lastPoint.x + x *i) % worldSize.width;
-		NSInteger theY = (lastPoint.y + y *i) % worldSize.height;
+		NSInteger theX = (lastPoint.x + x * (i + 1)) % worldSize.width;
+		NSInteger theY = (lastPoint.y + y * (i + 1)) % worldSize.height;
 		[points addObject:[NSValue valueWithSnakePoint:ZBMakeSnakePoint(theX, theY)]];
 	}
 }
