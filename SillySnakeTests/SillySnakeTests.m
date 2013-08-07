@@ -25,6 +25,18 @@
 	XCTAssertTrue(point.y == 20, @"y must be 20");
 }
 
+- (void)testHit
+{
+	ZBSnake *snake = [[ZBSnake alloc] initWithWorldSize:ZBMakeSnakeWorldSize(10, 10) length:6];
+	[snake changeDirection:ZBSnakeDirectionUp];
+	[snake move];
+	[snake changeDirection:ZBSnakeDirectionRight];
+	[snake move];
+	[snake changeDirection:ZBSnakeDirectionDown];
+	[snake move];
+	XCTAssertEqual([snake isHeadHitBody], YES, @"must hit the body.");
+}
+
 - (void)testIncreaseLength
 {
 	ZBSnake *snake = [[ZBSnake alloc] initWithWorldSize:ZBMakeSnakeWorldSize(10, 10) length:2];
