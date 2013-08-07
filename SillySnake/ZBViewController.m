@@ -20,8 +20,25 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	worldSize = ZBMakeSnakeWorldSize(20, 10);
+	[self setWantsFullScreenLayout:YES];	
+	worldSize = ZBMakeSnakeWorldSize(24, 15);
 	self.snakeView.delegate = self;
+
+	UISwipeGestureRecognizer *leftSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+	leftSwipeGR.direction = UISwipeGestureRecognizerDirectionLeft;
+	[self.snakeView addGestureRecognizer:leftSwipeGR];
+
+	UISwipeGestureRecognizer *rightSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+	rightSwipeGR.direction = UISwipeGestureRecognizerDirectionRight;
+	[self.snakeView addGestureRecognizer:rightSwipeGR];
+
+	UISwipeGestureRecognizer *upSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+	upSwipeGR.direction = UISwipeGestureRecognizerDirectionUp;
+	[self.snakeView addGestureRecognizer:upSwipeGR];
+
+	UISwipeGestureRecognizer *downSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+	downSwipeGR.direction = UISwipeGestureRecognizerDirectionDown;
+	[self.snakeView addGestureRecognizer:downSwipeGR];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,15 +94,25 @@
 	}
 	self.startButton.hidden = YES;
 
-	self.snake = [[ZBSnake alloc] initWithWorldSize:worldSize length:10];
+	self.snake = [[ZBSnake alloc] initWithWorldSize:worldSize length:2];
 	[self makeNewFruit];
-	self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(timerMethod:) userInfo:nil repeats:YES];
+	self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerMethod:) userInfo:nil repeats:YES];
 }
 - (void)endGame
 {
 	self.startButton.hidden = NO;
 	[self.timer invalidate];
 	self.timer = nil;
+}
+
+- (void)swipe:(UISwipeGestureRecognizer *)gr
+{
+	UISwipeGestureRecognizerDirection direction = gr.direction;
+	NSDictionary *directionMap = @{@(UISwipeGestureRecognizerDirectionRight): @"moveRight:",
+								   @(UISwipeGestureRecognizerDirectionLeft): @"moveLeft:",
+								   @(UISwipeGestureRecognizerDirectionUp): @"moveUp:",
+								   @(UISwipeGestureRecognizerDirectionDown): @"moveDown:"};
+	[(id)self performSelector:NSSelectorFromString(directionMap[@(direction)]) withObject:self];
 }
 
 - (IBAction)start:(id)sender
@@ -117,6 +144,8 @@
 	}
 }
 
+#pragma mark -
+#pragma mark ZBSnakeViewDelegate
 
 - (ZBSnakeWorldSize)worldSizeForSnakeView:(ZBSnakeView *)inView
 {
