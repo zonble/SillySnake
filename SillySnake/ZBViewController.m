@@ -17,28 +17,23 @@
 
 @implementation ZBViewController
 
+- (void)addGestureRecognizerWithDirection:(UISwipeGestureRecognizerDirection)direction
+{
+	UISwipeGestureRecognizer *gr = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+	gr.direction = direction;
+	[self.snakeView addGestureRecognizer:gr];
+}
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	[self setWantsFullScreenLayout:YES];	
 	worldSize = ZBMakeSnakeWorldSize(24, 15);
 	self.snakeView.delegate = self;
-
-	UISwipeGestureRecognizer *leftSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-	leftSwipeGR.direction = UISwipeGestureRecognizerDirectionLeft;
-	[self.snakeView addGestureRecognizer:leftSwipeGR];
-
-	UISwipeGestureRecognizer *rightSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-	rightSwipeGR.direction = UISwipeGestureRecognizerDirectionRight;
-	[self.snakeView addGestureRecognizer:rightSwipeGR];
-
-	UISwipeGestureRecognizer *upSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-	upSwipeGR.direction = UISwipeGestureRecognizerDirectionUp;
-	[self.snakeView addGestureRecognizer:upSwipeGR];
-
-	UISwipeGestureRecognizer *downSwipeGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-	downSwipeGR.direction = UISwipeGestureRecognizerDirectionDown;
-	[self.snakeView addGestureRecognizer:downSwipeGR];
+	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionLeft];
+	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionRight];
+	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionUp];
+	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionDown];
 }
 
 - (void)didReceiveMemoryWarning
