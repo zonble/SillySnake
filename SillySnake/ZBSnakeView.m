@@ -4,7 +4,8 @@
 
 - (void)drawRect:(CGRect)rect
 {
-	ZBSnakeWorldSize worldSize = [self.delegate worldSizeForSnakeView:self];
+	ZBSnake *snake = [self.delegate snakeForSnakeView:self];
+	ZBSnakeWorldSize worldSize = snake.worldSize;
 	if (worldSize.width <= 0 || worldSize.height <= 0) {
 		return;
 	}
@@ -12,7 +13,6 @@
 	CGFloat w = self.bounds.size.width/worldSize.width;
 	CGFloat h = self.bounds.size.height/worldSize.height;
 
-	ZBSnake *snake = [self.delegate snakeForSnakeView:self];
 	if (snake) {
 		NSArray *points = snake.points;
 		[[UIColor blackColor] set];

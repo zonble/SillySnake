@@ -2,11 +2,9 @@
 
 @class ZBSnakeView;
 @protocol ZBSnakeViewDelegate <NSObject>
-/*! Asks the delegate about the size of the world.  */
-- (ZBSnakeWorldSize)worldSizeForSnakeView:(ZBSnakeView *)inView;
-/*! Asks the delegate about the snake.  */
+/*! Asks the delegate about the snake. */
 - (ZBSnake *)snakeForSnakeView:(ZBSnakeView *)inView;
-/*! Asks the delegate for where the friut is.  */
+/*! Asks the delegate for where the friut is. */
 - (NSValue *)snakePointValueOfFruitForSnakeView:(ZBSnakeView *)inView;
 @end
 

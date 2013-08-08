@@ -143,5 +143,5 @@ ZBSnakePoint ZBMakeSnakePoint(NSUInteger x, NSUInteger y)
 }
 
 @synthesize points;
-
+@synthesize worldSize;
 @end

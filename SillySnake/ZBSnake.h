@@ -74,5 +74,5 @@ happens, the game is over. */
 /*! The array of locations where the snake's body occupies in the
 world. */
 @property (readonly, nonatomic) NSArray *points;
-
+@property (readonly, nonatomic) ZBSnakeWorldSize worldSize;
 @end

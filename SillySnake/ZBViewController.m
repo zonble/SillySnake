@@ -2,9 +2,6 @@
 #import "ZBSnakeView.h"
 
 @interface ZBViewController () <ZBSnakeViewDelegate>
-{
-	ZBSnakeWorldSize worldSize;
-}
 - (void)makeNewFruit;
 - (void)startGame;
 - (void)endGame;
@@ -28,7 +25,6 @@
 {
 	[super viewDidLoad];
 	[self setWantsFullScreenLayout:YES];	
-	worldSize = ZBMakeSnakeWorldSize(24, 15);
 	self.snakeView.delegate = self;
 	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionLeft];
 	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionRight];
@@ -64,6 +60,7 @@
 	srandomdev();
 	NSInteger x = 0;
 	NSInteger y = 0;
+	ZBSnakeWorldSize worldSize = self.snake.worldSize;
 	while (1) {
 		x = random() % worldSize.width;
 		y = random() % worldSize.height;
@@ -87,8 +84,8 @@
 	if (self.timer) {
 		return;
 	}
+	ZBSnakeWorldSize worldSize = ZBMakeSnakeWorldSize(24, 15);
 	self.startButton.hidden = YES;
-
 	self.snake = [[ZBSnake alloc] initWithWorldSize:worldSize length:2];
 	[self makeNewFruit];
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerMethod:) userInfo:nil repeats:YES];
@@ -142,10 +139,6 @@
 #pragma mark -
 #pragma mark ZBSnakeViewDelegate
 
-- (ZBSnakeWorldSize)worldSizeForSnakeView:(ZBSnakeView *)inView
-{
-	return worldSize;
-}
 - (ZBSnake *)snakeForSnakeView:(ZBSnakeView *)inView
 {
 	return self.snake;
