@@ -112,7 +112,7 @@ ZBSnakePoint ZBMakeSnakePoint(NSUInteger x, NSUInteger y)
 	if (lastPoint.x == 0 && theOneBeforeLastPoint.x == worldSize.width - 1) x = 1;
 	if (lastPoint.x == worldSize.width - 1 && theOneBeforeLastPoint.x == 0) x = -1;
 	if (lastPoint.y == 0 && theOneBeforeLastPoint.y == worldSize.height - 1) y = 1;
-	if (lastPoint.y == worldSize.height - 1 && theOneBeforeLastPoint.y == 0) x = -1;
+	if (lastPoint.y == worldSize.height - 1 && theOneBeforeLastPoint.y == 0) y = -1;
 
 	for (NSInteger i = 0; i < inLength; i++) {
 		NSInteger theX = (lastPoint.x + x * (i + 1)) % worldSize.width;
