@@ -4,6 +4,8 @@ SillySnake
 - Weizhong Yang (a.k.a zonble)
 - zonble at gmail dot com
 
+[![Build Status](https://travis-ci.org/zonble/SillySnake.png?branch=master)](https://travis-ci.org/zonble/SillySnake)
+
 The project is just a simple personal practice for programming. It is
 a remake of the classic video game "Snake" on iOS devicess, and it
 only took me about only one hour.
