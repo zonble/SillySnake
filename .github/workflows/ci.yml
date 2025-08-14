@@ -23,16 +23,16 @@ jobs:
       run: |
         xcodebuild \
           -project SillySnake.xcodeproj \
-          -scheme SillySnake \
+          -target SillySnake \
           -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
           clean build
 
     - name: Run Tests
       run: |
         xcodebuild \
           -project SillySnake.xcodeproj \
-          -scheme SillySnake \
+          -target SillySnakeTests \
           -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
           test
