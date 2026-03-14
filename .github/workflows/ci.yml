@@ -13,26 +13,33 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Select Xcode version
-      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-
     - name: Show Xcode version
       run: xcodebuild -version
 
-    - name: Build for iOS Simulator
+    - name: Build and Test
       run: |
+        SIMULATOR=$(python3 -c "
+import json, subprocess, sys
+result = subprocess.run(['xcrun', 'simctl', 'list', 'devices', 'available', '--json'], capture_output=True, text=True)
+data = json.loads(result.stdout)
+for runtime in sorted(data['devices'].keys(), reverse=True):
+    if 'iOS' in runtime:
+        iphones = sorted([d for d in data['devices'][runtime] if 'iPhone' in d['name']], key=lambda d: d['name'])
+        if iphones:
+            print(iphones[-1]['udid'])
+            break
+else:
+    print('ERROR: No iPhone simulator found', file=sys.stderr)
+    sys.exit(1)
+")
+        if [ -z "$SIMULATOR" ]; then
+          echo "Error: Could not find an available iPhone simulator" >&2
+          exit 1
+        fi
         xcodebuild \
           -project SillySnake.xcodeproj \
-          -target SillySnake \
+          -scheme SillySnake \
           -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
-          clean build
-
-    - name: Run Tests
-      run: |
-        xcodebuild \
-          -project SillySnake.xcodeproj \
-          -target SillySnakeTests \
-          -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
-          test
+          -destination "platform=iOS Simulator,id=$SIMULATOR" \
+          CODE_SIGNING_ALLOWED=NO \
+          clean test
