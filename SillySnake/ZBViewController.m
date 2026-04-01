@@ -24,7 +24,6 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[self setWantsFullScreenLayout:YES];	
 	self.snakeView.delegate = self;
 	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionLeft];
 	[self addGestureRecognizerWithDirection:UISwipeGestureRecognizerDirectionRight];
